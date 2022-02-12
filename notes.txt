@@ -1,0 +1,28 @@
+
+once you create project change server port in application.properties file 
+server.port=9999
+
+
+configure jsp support in project 
+0)  create WEB-INF folder , inside WEB-INF create views 
+	WEB-INF must be inside webapp folder 
+	webapp must be inside main folder 
+
+1) write below line in application.properties 
+	spring.mvc.view.prefix=WEB-INF/views/
+	spring.mvc.view.suffix=.jsp
+	
+2) add tomcat embeded jasper --> maven
+	pom.xml 
+	
+------------------------------------------------------------
+create controller SessionController --> @Controller 
+
+create url signup --> @Getmapping --> you can directly use that user in browser 
+load --> Signup.jsp 
+
+
+
+
+
+
