@@ -12,10 +12,9 @@ import com.dao.UserDao;
 @Controller
 public class SessionController {
 
-	
 	@Autowired
 	UserDao userDao;
-	
+
 	@GetMapping("/signup") // url
 	public String signup() {
 		System.out.println("signup......");
@@ -23,13 +22,12 @@ public class SessionController {
 	}
 
 	@PostMapping("/saveuser")
-	public String saveUser(UserBean user,Model model) {
+	public String saveUser(UserBean user, Model model) {
 		System.out.println(user.getFirstName());
 		System.out.println(user.getEmail());
 		System.out.println(user.getPassword());
-		model.addAttribute("user",user);
+		model.addAttribute("user", user);
 		userDao.addUser(user);
-		
 		return "Home";
 	}
 }

@@ -22,6 +22,111 @@ create url signup --> @Getmapping --> you can directly use that user in browser
 load --> Signup.jsp 
 
 
+-------------------------------------
+backend developer -- api [spring boot , NODE ] 
+
+frontend developer -- android , iphone 
+			angular , react 
+
+
+node | spring boot[SqL][web->noSql] | 
+
+angular | react | vue | next  | XXX |XXX
+
+RoR 
+
+
+
+boot --> zero configuration 
+
+spring.xml --> 0 .xml 
+	--> application.properties 
+
+
+
+jsp servlet
+spring web 
+
+http --> view technology --> jsp 
+
+
+
+response --> REST protocol  --> json 
+
+
+
+				amazon
+		website[apis]	android[apis]	iphone[apis] 	
+
+
+
+			backend [ input output ] 
+			urls -- apis [write once run anywhere ] 
+				     [consume ] 
+			
+
+			database 
+[    products | carts | users | payment | orders    ]
+
+
+
+
+mongodb 
+
+noSql 
+
+	data -> key:value 
+	Apache Ignite 
+	couchbase 
+	Azure cosmos db 
+
+
+	row-->
+	apache River 
+	 
+
+
+spring boot --> REST api 
+
+
+------------------REST-----------------------
+
+1) response --> json 
+2) user --> table -> add , remove , modify , read -> single , multiple 
+
+urls -> user
+		/users 					POST 		insert 
+		/users/userId			DELETE		remove 
+		/users					GET			read -> all [ rows ]
+		/users/userId			GET			read -> single [row ] 
+		/users					PUT			modify - update 
+
+product 
+		/products 				POST		add 
+		/products				GET 		read all 
+		/products				PUT			modify-update 
+		/products/userId		GET			read single 
+		/products/userId		DELETE		remove 
+		
+-------------------------------------------------------------------
+
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
