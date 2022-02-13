@@ -109,7 +109,26 @@ product
 		/products/userId		DELETE		remove 
 		
 -------------------------------------------------------------------
+boot application --> db connect 
 
+		1) pg driver [ edit starter ]  
+		2) spring jdbc [ edit starter ] 
+		3) configuration for database -- dirvername url username and password 
+		   below line should be in application.properties   
+		    spring.datasource.driver-class-name=org.postgresql.Driver
+			spring.datasource.url=jdbc:postgresql://localhost:5434/esociety
+			spring.datasource.username=postgres
+			spring.datasource.password=root
+		
+		
+		create eSociety database 
+		create role table inside schema of eSociety 
+		column -> roleid : serial : not null primary key 
+				  rolename : chara varying : 20 : not null 
+-------------------------------------------------------------------
+		
+		
+		 
 		
 		
 		
