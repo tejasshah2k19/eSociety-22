@@ -8,17 +8,18 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.bean.HouseBean;
-import com.bean.RoleBean;
 
 @Repository
-public class RoleDao {
+public class HouseDao {
 
 	@Autowired
-	JdbcTemplate stmt;
-
-	public void addRole(RoleBean role) {
-		stmt.update("insert into role (rolename) values (?) ", role.getRoleName());
-	}
-
+	JdbcTemplate stmt; 
 	
+	
+	public void addHouse(HouseBean house) {
+		stmt.update("insert into house (title) values (?) ",house.getTitle());
+	}
+	public List<HouseBean> getAllHouses() {
+		return stmt.query("select * from house", new BeanPropertyRowMapper<HouseBean>(HouseBean.class));
+	}
 }
