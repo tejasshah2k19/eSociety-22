@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.bean.HouseBean;
 import com.bean.RoleBean;
 
 @Repository
@@ -20,5 +19,8 @@ public class RoleDao {
 		stmt.update("insert into role (rolename) values (?) ", role.getRoleName());
 	}
 
-	
+	public List<RoleBean> getAllRoles() {
+		return stmt.query("select * from role", new BeanPropertyRowMapper<RoleBean>(RoleBean.class));
+	}
+
 }

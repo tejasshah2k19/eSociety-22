@@ -13,13 +13,22 @@ import com.bean.HouseBean;
 public class HouseDao {
 
 	@Autowired
-	JdbcTemplate stmt; 
-	
-	
+	JdbcTemplate stmt;
+
 	public void addHouse(HouseBean house) {
-		stmt.update("insert into house (title) values (?) ",house.getTitle());
+		stmt.update("insert into house (title) values (?) ", house.getTitle());
 	}
+
 	public List<HouseBean> getAllHouses() {
 		return stmt.query("select * from house", new BeanPropertyRowMapper<HouseBean>(HouseBean.class));
+	}
+
+	public void deleteHouse(int houseId) {
+		stmt.update("delete from house where houseid = ?", houseId);
+	}
+
+	public void updateHouse(HouseBean house) {
+
+		stmt.update("update house set title = ? where houseid = ? ", house.getTitle(), house.getHouseId());
 	}
 }

@@ -11,9 +11,10 @@ public class UserDao {
 
 	@Autowired
 	JdbcTemplate stmt;
-	
-	
+
 	public void addUser(UserBean user) {
-		stmt.update("insert into users (firstname,email,password) values (?,?,?)",user.getFirstName(),user.getEmail(),user.getPassword()); 
+		stmt.update("insert into users (firstname,email,password,roleid,lastname,houseid,mobileno) values (?,?,?,?,?,?,?)",
+				user.getFirstName(), user.getEmail(), user.getPassword(), user.getRoleId(), user.getLastName(),
+				user.getHouseId(), user.getMobileNo());
 	}
 }
