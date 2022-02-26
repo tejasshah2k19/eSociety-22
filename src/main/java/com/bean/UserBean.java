@@ -9,6 +9,8 @@ public class UserBean {
 	String lastName;
 	int houseId; 
 	
+	String roleName;
+	
 	
 	public String getFirstName() {
 		return firstName;
@@ -72,6 +74,14 @@ public class UserBean {
 
 	public void setHouseId(int houseId) {
 		this.houseId = houseId;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
 	}
 	
 	

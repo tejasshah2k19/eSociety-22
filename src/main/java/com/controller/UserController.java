@@ -1,6 +1,9 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,5 +20,10 @@ public class UserController {
 	public UserBean saveUser(UserBean user) {
 		userDao.addUser(user);
 		return user;
+	}
+	
+	@GetMapping("/users")
+	public List<UserBean> getAllUsers(){
+		return userDao.getAllUsers();
 	}
 }
